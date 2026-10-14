@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wulfaven Brewing Company · Cervecería artesanal en Tampa, FL</title>
+<meta name="description" content="Wulfaven Brewing Company — cervecería artesanal familiar en Carrollwood, Tampa FL. 16 cervezas de barril, eventos cada semana, tu refugio. 10828 Perez Dr, Tampa, FL 33618 · (813) 374-8226">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rye&family=Karla:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --sage:#6f7d4f; --sage-dark:#59663c; --sage-deep:#4a5533;
+  --cream:#f7f2e2; --cream-dark:#efe6cc;
+  --yellow:#ffd21f; --yellow-dark:#f5b800;
+  --ink:#1b1812; --brown:#3a2e1e;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Karla',-apple-system,'Segoe UI',Arial,sans-serif;color:var(--ink);background:var(--sage-deep);line-height:1.5}
+.page{max-width:640px;margin:0 auto;background:var(--cream);box-shadow:0 0 40px rgba(0,0,0,.35)}
+h1,h2,h3,.display{font-family:'Rye',Georgia,serif;font-weight:400;line-height:1.15;letter-spacing:.5px}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{padding:0 20px}
+
+/* ===== Header ===== */
+header.top{background:var(--sage);color:#fff;padding:14px 16px;position:sticky;top:0;z-index:50;border-bottom:4px solid var(--yellow)}
+.top-row{display:table;width:100%;table-layout:auto}
+.logo-badge{width:66px;height:66px;border-radius:50%;background:var(--cream);padding:4px;border:3px solid var(--yellow);display:table-cell;vertical-align:middle}
+.logo-badge img{width:58px;height:58px;border-radius:50%;object-fit:cover;display:block}
+.brand{display:table-cell;vertical-align:middle;padding-left:12px;width:99%}
+.brand .name{font-family:'Rye',Georgia,serif;font-size:1.5rem;line-height:1;color:#fff;text-shadow:2px 2px 0 rgba(0,0,0,.25);white-space:nowrap}
+.brand .sub{font-size:.68rem;letter-spacing:3px;color:var(--yellow);font-weight:700}
+.top-actions{margin-top:12px;text-align:center}
+.top-actions .lang{display:inline-block;vertical-align:middle;margin-right:10px}
+.top-actions .tel-btn{display:inline-block;vertical-align:middle;margin-top:0}
+.lang{display:inline-block;border:2px solid var(--yellow);border-radius:10px;padding:2px}
+.lang a{display:inline-block;color:#fff;font-weight:800;font-size:.8rem;padding:7px 12px;border-radius:7px;cursor:pointer;text-decoration:none}
+.lang a.active{background:var(--yellow);color:var(--ink)}
+.tel-btn{display:inline-flex;align-items:center;gap:6px;background:var(--yellow);color:var(--ink);font-weight:800;text-decoration:none;border-radius:10px;padding:9px 12px;font-size:.95rem;margin-top:10px}
+.tel-btn.big{font-size:1.15rem;padding:14px 20px;border-radius:14px}
+
+/* ===== Hero ===== */
+.hero{position:relative;color:#fff;text-align:center}
+.hero img.bg{width:100%;height:430px;object-fit:cover}
+.hero .veil{position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,18,8,.15) 0%,rgba(20,18,8,.78) 85%)}
+.hero .copy{position:absolute;left:0;right:0;bottom:0;padding:26px 20px 30px}
+.kicker{display:inline-block;background:var(--yellow);color:var(--ink);font-weight:800;font-size:.78rem;letter-spacing:2px;padding:6px 14px;border-radius:20px;margin-bottom:12px}
+.hero h1{font-size:2.5rem;color:#fff;text-shadow:3px 3px 0 rgba(0,0,0,.35);margin-bottom:8px}
+.hero p.lead{font-size:1.12rem;font-weight:600;color:var(--cream);margin-bottom:18px}
+.cta-row{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;font-weight:800;text-decoration:none;border-radius:12px;padding:13px 18px;font-size:1rem}
+.btn-yellow{background:var(--yellow);color:var(--ink)}
+.btn-outline{background:rgba(0,0,0,.35);color:#fff;border:2px solid #fff}
+
+/* ===== Badges strip ===== */
+.strip{background:var(--ink);color:var(--cream);display:flex;justify-content:space-around;text-align:center;padding:14px 8px;flex-wrap:wrap;gap:8px}
+.strip div{flex:1 1 0;min-width:90px}
+.strip .n{font-family:'Rye',Georgia,serif;font-size:1.5rem;color:var(--yellow)}
+.strip .t{font-size:.72rem;letter-spacing:1px;font-weight:700}
+
+/* ===== Sections ===== */
+section{padding:44px 0}
+section.sage{background:var(--sage);color:#fff}
+section.cream{background:var(--cream);color:var(--ink)}
+section.ink{background:var(--ink);color:var(--cream)}
+.sec-head{text-align:center;margin-bottom:26px;padding:0 20px}
+.sec-head .eyebrow{font-size:.75rem;font-weight:800;letter-spacing:3px;color:var(--yellow-dark);margin-bottom:6px}
+section.sage .sec-head .eyebrow,section.ink .sec-head .eyebrow{color:var(--yellow)}
+.sec-head h2{font-size:2.1rem}
+.sec-head p{margin-top:8px;font-size:1.05rem;max-width:480px;margin-left:auto;margin-right:auto}
+.photo-card{border-radius:16px;overflow:hidden;margin:0 20px 22px;box-shadow:0 8px 24px rgba(0,0,0,.25);border:4px solid #fff}
+.photo-card img{width:100%;height:260px;object-fit:cover}
+.caption{font-size:.82rem;font-style:italic;opacity:.75;text-align:center;padding:8px 20px 0}
+
+/* ===== Tap list ===== */
+.tap-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:0 16px}
+.beer{background:#fff;border:2px solid var(--sage);border-radius:14px;padding:14px 12px;position:relative}
+.beer .bname{font-family:'Rye',Georgia,serif;font-size:1.02rem;line-height:1.2;margin-bottom:4px}
+.beer .bstyle{font-size:.82rem;color:#5a5344;font-weight:600}
+.beer .babv{display:inline-block;margin-top:8px;background:var(--sage);color:#fff;font-weight:800;font-size:.85rem;border-radius:8px;padding:3px 10px}
+.beer .babv.ask{background:var(--yellow);color:var(--ink);font-size:.75rem}
+.beer .bnote{margin-top:8px;font-size:.75rem;font-weight:700;color:#8a6d00;background:#fff4c2;border-radius:8px;padding:4px 8px;display:inline-block}
+.order-box{text-align:center;margin:30px 20px 0;background:var(--sage);border-radius:16px;padding:24px 18px;color:#fff}
+.order-box h3{font-size:1.6rem;margin-bottom:6px}
+.order-box p{margin-bottom:16px;font-size:1rem}
+
+/* ===== Historia ===== */
+.story p{font-size:1.05rem;margin-bottom:14px}
+.story .name-meaning{background:rgba(0,0,0,.22);border-left:5px solid var(--yellow);border-radius:0 12px 12px 0;padding:16px;margin:20px 0}
+.story .name-meaning strong{color:var(--yellow)}
+.pillars{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:20px}
+.pillar{background:var(--yellow);color:var(--ink);font-weight:800;border-radius:20px;padding:8px 16px;font-size:.9rem}
+
+/* ===== Eventos ===== */
+.event{display:flex;gap:14px;background:#fff;border-radius:14px;padding:14px;margin:0 16px 12px;box-shadow:0 3px 10px rgba(0,0,0,.08);border-left:6px solid var(--yellow)}
+.event .date{flex:0 0 64px;text-align:center;background:var(--sage);color:#fff;border-radius:10px;padding:8px 4px;height:fit-content}
+.event .date .d{font-family:'Rye',Georgia,serif;font-size:1.6rem;line-height:1}
+.event .date .m{font-size:.7rem;font-weight:800;letter-spacing:1px}
+.event .info h3{font-size:1.15rem;margin-bottom:2px}
+.event .info .when{font-weight:800;font-size:.88rem;color:var(--sage-dark)}
+.event .info p{font-size:.92rem;color:#4a4436;margin-top:4px}
+.event.recurrent{border-left-color:var(--sage)}
+.event.recurrent .date{background:var(--yellow);color:var(--ink)}
+.trucks{background:var(--ink);color:var(--cream);border-radius:14px;margin:6px 16px 0;padding:18px}
+.trucks h3{color:var(--yellow);font-size:1.25rem;margin-bottom:8px}
+.trucks p{font-size:.95rem;margin-bottom:8px}
+.trucks ul{list-style:none;display:flex;flex-wrap:wrap;gap:8px}
+.trucks li{background:#2c2a22;border:1px solid var(--yellow);border-radius:16px;padding:5px 12px;font-size:.82rem;font-weight:600}
+.note-box{margin:18px 16px 0;background:#fff4c2;border:2px dashed var(--yellow-dark);border-radius:12px;padding:14px;font-size:.92rem;text-align:center}
+
+/* ===== Vinos & más / Visítanos ===== */
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:0 16px}
+.treat{background:rgba(255,255,255,.12);border:2px solid rgba(255,255,255,.35);border-radius:14px;padding:18px 14px;text-align:center}
+.treat .emoji{font-size:2rem}
+.treat h3{font-size:1.15rem;margin:8px 0 6px}
+.treat p{font-size:.9rem}
+.hours{width:100%;border-collapse:collapse;margin:0 0 18px;font-size:1rem}
+.hours td{padding:9px 6px;border-bottom:1px solid #d8cfb2}
+.hours td:last-child{text-align:right;font-weight:700}
+.hours tr.closed td{color:#8a6d00;font-weight:700}
+.map-frame{border-radius:16px;overflow:hidden;margin:0 16px 18px;border:4px solid var(--sage)}
+.map-frame iframe{width:100%;height:280px;border:0;display:block}
+.addr-card{background:#fff;border-radius:14px;margin:0 16px 18px;padding:18px;box-shadow:0 3px 10px rgba(0,0,0,.08)}
+.addr-card .row{display:flex;gap:10px;align-items:flex-start;margin-bottom:10px;font-size:1rem}
+.addr-card .row:last-child{margin-bottom:0}
+
+/* ===== Formulario eventos privados ===== */
+form.priv{background:rgba(0,0,0,.22);border-radius:16px;padding:22px 18px;margin:0 16px}
+form.priv label{display:block;font-weight:700;font-size:.9rem;margin:12px 0 4px}
+form.priv input,form.priv textarea,form.priv select{width:100%;border:2px solid var(--yellow);border-radius:10px;padding:12px;font-size:1rem;font-family:inherit;background:#fff;color:var(--ink)}
+form.priv textarea{min-height:90px;resize:vertical}
+.form-confirm{display:none;background:#fff;color:var(--ink);border-radius:16px;padding:26px 20px;margin:0 16px;text-align:center;border:4px solid var(--yellow)}
+.form-confirm.show{display:block}
+.form-confirm h3{font-size:1.5rem;margin-bottom:10px}
+
+/* ===== Instagram / Reseñas ===== */
+.ig-cta{text-align:center;padding:0 20px}
+.ig-handle{font-family:'Rye',Georgia,serif;font-size:1.7rem;margin:10px 0 4px}
+.stars{color:var(--yellow);font-size:2.2rem;letter-spacing:4px}
+.big-rating{font-family:'Rye',Georgia,serif;font-size:3.4rem;color:var(--yellow);line-height:1}
+.qr-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;padding:0 20px;margin-top:22px}
+.qr-card{background:#fff;border-radius:14px;padding:16px 10px;text-align:center;color:var(--ink)}
+.qr-card img{width:130px;height:130px;margin:0 auto 8px}
+.qr-card h3{font-size:1rem;margin-bottom:2px}
+.qr-card p{font-size:.8rem;color:#5a5344}
+
+/* ===== Footer ===== */
+footer{background:#14120c;color:var(--cream);padding:34px 20px 26px;text-align:center}
+footer .fname{font-family:'Rye',Georgia,serif;font-size:1.5rem;color:var(--yellow);margin-bottom:8px}
+footer p{font-size:.92rem;margin-bottom:6px}
+footer .ftel{display:inline-block;background:var(--yellow);color:var(--ink);font-weight:800;text-decoration:none;border-radius:10px;padding:10px 18px;font-size:1.05rem;margin:12px 0}
+footer .fine{font-size:.75rem;opacity:.6;margin-top:14px}
+@media(min-width:640px){.hero h1{font-size:3rem}}
+</style>
+</head>
+<body>
+<div class="page">
+
+<!-- ================= HEADER ================= -->
+<header class="top">
+  <div class="top-row">
+    <div class="logo-badge"><img src="imgs/logo.jpg" alt="Wulfaven Brewing Company — logo del lobo"></div>
+    <div class="brand">
+      <div class="name">WULFAVEN</div>
+      <div class="sub">BREWING COMPANY</div>
+    </div>
+  </div>
+  <div class="top-actions">
+    <div class="lang" role="group" aria-label="Idioma / Language">
+      <a id="btn-es" class="active" onclick="setLang('es');return false;" href="#">ES</a><a id="btn-en" onclick="setLang('en');return false;" href="#">EN</a>
+    </div>
+    <a class="tel-btn" href="tel:+18133748226">📞 (813) 374-8226</a>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero" style="padding:0">
+  <img class="bg" src="imgs/brindis.jpg" alt="Brindis con cervezas Wulfaven al atardecer">
+  <div class="veil"></div>
+  <div class="copy">
+    <span class="kicker" data-es="CARROLLWOOD · TAMPA, FL" data-en="CARROLLWOOD · TAMPA, FL">CARROLLWOOD · TAMPA, FL</span>
+    <h1 data-es="Bienvenido a tu refugio" data-en="Welcome to your safe haven">Bienvenido a tu refugio</h1>
+    <p class="lead" data-es="Cervecería artesanal familiar. Cerveza hecha a mano, comunidad de verdad y tu tercer hogar." data-en="Family-run craft brewery. Handcrafted beer, real community, your third home.">Cervecería artesanal familiar. Cerveza hecha a mano, comunidad de verdad y tu tercer hogar.</p>
+    <div class="cta-row">
+      <a class="btn btn-yellow" href="tel:+18133748226" data-es="🍺 Ordenar para llevar" data-en="🍺 Order to go">🍺 Ordenar para llevar</a>
+      <a class="btn btn-outline" href="https://www.google.com/maps/dir/?api=1&destination=Wulfaven+Brewing+Company,+10828+Perez+Dr,+Tampa,+FL+33618" target="_blank" rel="noopener" data-es="📍 Cómo llegar" data-en="📍 Get directions">📍 Cómo llegar</a>
+    </div>
+  </div>
+</section>
+
+<div class="strip">
+  <div><div class="n">4.8★</div><div class="t" data-es="242 RESEÑAS" data-en="242 REVIEWS">242 RESEÑAS</div></div>
+  <div><div class="n">16</div><div class="t" data-es="DE BARRIL" data-en="ON TAP">DE BARRIL</div></div>
+  <div><div class="n">4.º</div><div class="t" data-es="ANIVERSARIO" data-en="ANNIVERSARY">ANIVERSARIO</div></div>
+  <div><div class="n">100%</div><div class="t" data-es="ARTESANAL" data-en="HANDCRAFTED">ARTESANAL</div></div>
+</div>
+
+<!-- ================= TAP LIST ================= -->
+<section class="cream" id="taplist">
+  <div class="sec-head">
+    <div class="eyebrow" data-es="DE NUESTROS TANQUES A TU VASO" data-en="FROM OUR TANKS TO YOUR GLASS">DE NUESTROS TANQUES A TU VASO</div>
+    <h2 data-es="En el barril" data-en="On tap">En el barril</h2>
+    <p data-es="16 cervezas artesanales servidas frescas en nuestro taproom. La selección rota: pregunta por las novedades." data-en="16 craft beers poured fresh in our taproom. The lineup rotates — ask about what's new.">16 cervezas artesanales servidas frescas en nuestro taproom. La selección rota: pregunta por las novedades.</p>
+  </div>
+  <div class="tap-grid" id="beer-grid"></div>
+  <div class="order-box">
+    <h3 data-es="¿Antojo de Wulfaven en casa?" data-en="Craving Wulfaven at home?">¿Antojo de Wulfaven en casa?</h3>
+    <p data-es="Llámanos y ordena tus latas y crowlers para llevar." data-en="Call us and order your cans and crowlers to go.">Llámanos y ordena tus latas y crowlers para llevar.</p>
+    <a class="btn btn-yellow big" href="tel:+18133748226" data-es="🍺 Ordenar para llevar" data-en="🍺 Order to go">🍺 Ordenar para llevar</a>
+  </div>
+</section>
+
+<!-- ================= HISTORIA ================= -->
+<section class="sage story" id="historia">
+  <div class="sec-head">
+    <div class="eyebrow" data-es="NUESTRA HISTORIA" data-en="OUR STORY">NUESTRA HISTORIA</div>
+    <h2 data-es="Una manada familiar" data-en="A family pack">Una manada familiar</h2>
+  </div>
+  <div class="photo-card"><img src="imgs/familia.jpg" alt="La familia Wulfaven frente al letrero de la cervecería"></div>
+  <div class="wrap">
+    <p data-es="Wulfaven nació de la pasión cervecera de Joseph Lazzara y su padre, Santo Lazzara. La idea surgió en 2017, consiguieron el local en 2019, el Covid pausó los planes y la construcción arrancó a finales de 2021. Hoy es la primera microcervecería de Carrollwood." data-en="Wulfaven was born from the brewing passion of Joseph Lazzara and his father, Santo Lazzara. The idea sparked in 2017, they secured the building in 2019, Covid paused the plans, and construction began in late 2021. Today it is Carrollwood's first microbrewery.">Wulfaven nació de la pasión cervecera de Joseph Lazzara y su padre, Santo Lazzara. La idea surgió en 2017, consiguieron el local en 2019, el Covid pausó los planes y la construcción arrancó a finales de 2021. Hoy es la primera microcervecería de Carrollwood.</p>
+    <div class="name-meaning">
+      <p style="margin:0" data-es="🐺 <strong>Wulf</strong> = lobo. La manada es la familia, los amigos y la comunidad. 🏠 <strong>Haven</strong> = refugio. Queremos ser tu tercer hogar: no tu casa, no tu trabajo… tu refugio." data-en="🐺 <strong>Wulf</strong> = wolf. The pack is family, friends and community. 🏠 <strong>Haven</strong> = a safe place. We want to be your third home: not your house, not your job… your haven.">🐺 <strong>Wulf</strong> = lobo. La manada es la familia, los amigos y la comunidad. 🏠 <strong>Haven</strong> = refugio. Queremos ser tu tercer hogar: no tu casa, no tu trabajo… tu refugio.</p>
+    </div>
+    <p data-es="En octubre de 2026 celebramos nuestro 4.º aniversario. Cuatro años de cerveza hecha a mano, de vecinos que se volvieron amigos y de una manada que sigue creciendo. Gracias por ser parte." data-en="In October 2026 we celebrate our 4th anniversary. Four years of handcrafted beer, neighbors turned friends, and a pack that keeps growing. Thank you for being part of it.">En octubre de 2026 celebramos nuestro 4.º aniversario. Cuatro años de cerveza hecha a mano, de vecinos que se volvieron amigos y de una manada que sigue creciendo. Gracias por ser parte.</p>
+    <div class="pillars">
+      <span class="pillar" data-es="🤝 Hecho a mano" data-en="🤝 Handcrafted">🤝 Hecho a mano</span>
+      <span class="pillar" data-es="👨‍👩‍👧 Familiar" data-en="👨‍👩‍👧 Family-run">👨‍👩‍👧 Familiar</span>
+      <span class="pillar" data-es="🏡 Tu refugio" data-en="🏡 Your haven">🏡 Tu refugio</span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= EVENTOS ================= -->
+<section class="cream" id="eventos" style="padding-bottom:34px">
+  <div class="sec-head">
+    <div class="eyebrow" data-es="OCTUBRE 2026" data-en="OCTOBER 2026">OCTUBRE 2026</div>
+    <h2 data-es="Eventos de la manada" data-en="Pack events">Eventos de la manada</h2>
+    <p data-es="Siempre hay algo pasando en tu refugio. Entrada libre a los eventos semanales." data-en="There's always something happening at your haven. Weekly events are free to attend.">Siempre hay algo pasando en tu refugio. Entrada libre a los eventos semanales.</p>
+  </div>
+
+  <div class="event recurrent">
+    <div class="date"><div class="d">🏃</div><div class="m" data-es="MARTES" data-en="TUESDAYS">MARTES</div></div>
+    <div class="info"><h3>Run Club</h3><div class="when" data-es="Todos los martes · 6:30 PM" data-en="Every Tuesday · 6:30 PM">Todos los martes · 6:30 PM</div>
+    <p data-es="Corre con la manada y quédate por una pinta. Todos los niveles son bienvenidos." data-en="Run with the pack and stay for a pint. All levels welcome.">Corre con la manada y quédate por una pinta. Todos los niveles son bienvenidos.</p></div>
+  </div>
+  <div class="event recurrent">
+    <div class="date"><div class="d">🧠</div><div class="m" data-es="MIÉRCOLES" data-en="WEDNESDAYS">MIÉRCOLES</div></div>
+    <div class="info"><h3 data-es="Noche de trivia" data-en="Trivia night">Noche de trivia</h3><div class="when" data-es="Todos los miércoles · 7–9 PM" data-en="Every Wednesday · 7–9 PM">Todos los miércoles · 7–9 PM</div>
+    <p data-es="Arma tu equipo, pide una ronda y demuestra quién sabe más." data-en="Build your team, order a round and prove who knows the most.">Arma tu equipo, pide una ronda y demuestra quién sabe más.</p></div>
+  </div>
+
+  <div class="event">
+    <div class="date"><div class="d">22</div><div class="m">OCT</div></div>
+    <div class="info"><h3>Plant Bingo</h3><div class="when" data-es="Jueves 22 de octubre · 7 PM" data-en="Thursday, October 22 · 7 PM">Jueves 22 de octubre · 7 PM</div>
+    <p data-es="Bingo con premios de plantas + celebramos nuestro verdadero 4.º aniversario. 🌿🎂" data-en="Bingo with plant prizes + we celebrate our true 4th anniversary. 🌿🎂">Bingo con premios de plantas + celebramos nuestro verdadero 4.º aniversario. 🌿🎂</p></div>
+  </div>
+  <div class="event">
+    <div class="date"><div class="d">23</div><div class="m">OCT</div></div>
+    <div class="info"><h3 data-es="Música en vivo" data-en="Live music">Música en vivo</h3><div class="when" data-es="Viernes 23 de octubre · 6–9 PM · Andrew" data-en="Friday, October 23 · 6–9 PM · Andrew">Viernes 23 de octubre · 6–9 PM · Andrew</div>
+    <p data-es="Tarde de música en vivo en el taproom." data-en="An evening of live music in the taproom.">Tarde de música en vivo en el taproom.</p></div>
+  </div>
+  <div class="event">
+    <div class="date"><div class="d">24</div><div class="m">OCT</div></div>
+    <div class="info"><h3 data-es="🎉 Fiesta 4.º aniversario · Dueling Pianos" data-en="🎉 4th Anniversary Party · Dueling Pianos">🎉 Fiesta 4.º aniversario · Dueling Pianos</h3><div class="when" data-es="Sábado 24 de octubre · 6:30–9:30 PM" data-en="Saturday, October 24 · 6:30–9:30 PM">Sábado 24 de octubre · 6:30–9:30 PM</div>
+    <p data-es="Nuestra gran fiesta de aniversario con pianos en duelo. Evento gratuito con la compra de una bebida." data-en="Our big anniversary party with dueling pianos. Free event with purchase of a beverage.">Nuestra gran fiesta de aniversario con pianos en duelo. Evento gratuito con la compra de una bebida.</p></div>
+  </div>
+  <div class="event">
+    <div class="date"><div class="d">25</div><div class="m">OCT</div></div>
+    <div class="info"><h3>Vendor Market</h3><div class="when" data-es="Domingo 25 de octubre · 12–4 PM" data-en="Sunday, October 25 · 12–4 PM">Domingo 25 de octubre · 12–4 PM</div>
+    <p data-es="Mercado de vendedores locales: compra local, bebe local. 🛍️" data-en="Local vendor market: shop local, drink local. 🛍️">Mercado de vendedores locales: compra local, bebe local. 🛍️</p></div>
+  </div>
+  <div class="event">
+    <div class="date"><div class="d">29</div><div class="m">OCT</div></div>
+    <div class="info"><h3>Trunk or Treat</h3><div class="when" data-es="Jueves 29 de octubre · 6–8 PM" data-en="Thursday, October 29 · 6–8 PM">Jueves 29 de octubre · 6–8 PM</div>
+    <p data-es="Dulces, disfraces y diversión familiar para Halloween. 🎃" data-en="Candy, costumes and family fun for Halloween. 🎃">Dulces, disfraces y diversión familiar para Halloween. 🎃</p></div>
+  </div>
+  <div class="event">
+    <div class="date"><div class="d">30</div><div class="m">OCT</div></div>
+    <div class="info"><h3 data-es="Cookie Pop Up + Magia de cerca" data-en="Cookie Pop Up + Tableside Magic">Cookie Pop Up + Magia de cerca</h3><div class="when" data-es="Viernes 30 de octubre · 5 PM y 6:30–9:30 PM" data-en="Friday, October 30 · 5 PM & 6:30–9:30 PM">Viernes 30 de octubre · 5 PM y 6:30–9:30 PM</div>
+    <p data-es="Empty Nest Cookie Pop Up desde las 5 PM y noche de magia en tu mesa de 6:30 a 9:30 PM. 🍪✨" data-en="Empty Nest Cookie Pop Up from 5 PM and tableside magic night 6:30–9:30 PM. 🍪✨">Empty Nest Cookie Pop Up desde las 5 PM y noche de magia en tu mesa de 6:30 a 9:30 PM. 🍪✨</p></div>
+  </div>
+  <div class="event">
+    <div class="date"><div class="d">31</div><div class="m">OCT</div></div>
+    <div class="info"><h3 data-es="Horario especial de Halloween" data-en="Special Halloween hours">Horario especial de Halloween</h3><div class="when" data-es="Sábado 31 de octubre · 12–8 PM" data-en="Saturday, October 31 · 12–8 PM">Sábado 31 de octubre · 12–8 PM</div>
+    <p data-es="Cerramos temprano este día. ¡Feliz Halloween! 🎃" data-en="We close early this day. Happy Halloween! 🎃">Cerramos temprano este día. ¡Feliz Halloween! 🎃</p></div>
+  </div>
+
+  <div class="trucks">
+    <h3 data-es="🚚 Food trucks rotativos" data-en="🚚 Rotating food trucks">🚚 Food trucks rotativos</h3>
+    <p data-es="No tenemos cocina: el sabor lo traen los mejores food trucks de Tampa, rotando cada semana." data-en="We have no kitchen — flavor comes from Tampa's best food trucks, rotating weekly.">No tenemos cocina: el sabor lo traen los mejores food trucks de Tampa, rotando cada semana.</p>
+    <ul>
+      <li>Boy Named Sous</li><li>Tower 10 Burgers / Tacos</li><li>Brisket &amp; Beyond</li>
+      <li>Tito's Latin Cuisine</li><li>Salsa My Love</li><li>Saucin Wings</li><li>Liberty Smokehouse</li>
+    </ul>
+  </div>
+  <div class="note-box" data-es="📲 Sigue <strong>@wulfavenbrewing</strong> en Instagram para el calendario actualizado y los trucks de cada semana." data-en="📲 Follow <strong>@wulfavenbrewing</strong> on Instagram for the updated calendar and each week's trucks.">📲 Sigue <strong>@wulfavenbrewing</strong> en Instagram para el calendario actualizado y los trucks de cada semana.</div>
+</section>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"Event","name":"Wulfaven Run Club","startDate":"2026-10-20T18:30:00-04:00","eventStatus":"https://schema.org/EventScheduled","location":{"@type":"Place","name":"Wulfaven Brewing Company","address":"10828 Perez Dr, Tampa, FL 33618"},"description":"Weekly run club, every Tuesday at 6:30 PM."},
+{"@type":"Event","name":"Wulfaven Trivia Night","startDate":"2026-10-21T19:00:00-04:00","endDate":"2026-10-21T21:00:00-04:00","eventStatus":"https://schema.org/EventScheduled","location":{"@type":"Place","name":"Wulfaven Brewing Company","address":"10828 Perez Dr, Tampa, FL 33618"},"description":"Trivia every Wednesday 7-9 PM."},
+{"@type":"Event","name":"Plant Bingo + 4th Anniversary","startDate":"2026-10-22T19:00:00-04:00","eventStatus":"https://schema.org/EventScheduled","location":{"@type":"Place","name":"Wulfaven Brewing Company","address":"10828 Perez Dr, Tampa, FL 33618"}},
+{"@type":"Event","name":"Live Music with Andrew","startDate":"2026-10-23T18:00:00-04:00","endDate":"2026-10-23T21:00:00-04:00","eventStatus":"https://schema.org/EventScheduled","location":{"@type":"Place","name":"Wulfaven Brewing Company","address":"10828 Perez Dr, Tampa, FL 33618"}},
+{"@type":"Event","name":"4th Anniversary Party — Dueling Pianos","startDate":"2026-10-24T18:30:00-04:00","endDate":"2026-10-24T21:30:00-04:00","eventStatus":"https://schema.org/EventScheduled","offers":{"@type":"Offer","price":"0","priceCurrency":"USD","description":"Free with purchase of a beverage"},"location":{"@type":"Place","name":"Wulfaven Brewing Company","address":"10828 Perez Dr, Tampa, FL 33618"}},
+{"@type":"Event","name":"Vendor Market","startDate":"2026-10-25T12:00:00-04:00","endDate":"2026-10-25T16:00:00-04:00","eventStatus":"https://schema.org/EventScheduled","location":{"@type":"Place","name":"Wulfaven Brewing Company","address":"10828 Perez Dr, Tampa, FL 33618"}},
+{"@type":"Event","name":"Trunk or Treat","startDate":"2026-10-29T18:00:00-04:00","endDate":"2026-10-29T20:00:00-04:00","eventStatus":"https://schema.org/EventScheduled","location":{"@type":"Place","name":"Wulfaven Brewing Company","address":"10828 Perez Dr, Tampa, FL 33618"}},
+{"@type":"Event","name":"Empty Nest Cookie Pop Up + Tableside Magic Night","startDate":"2026-10-30T17:00:00-04:00","endDate":"2026-10-30T21:30:00-04:00","eventStatus":"https://schema.org/EventScheduled","location":{"@type":"Place","name":"Wulfaven Brewing Company","address":"10828 Perez Dr, Tampa, FL 33618"}}
+]}
+</script>
+
+<!-- ================= VINOS & MÁS ================= -->
+<section class="sage" id="vinos">
+  <div class="sec-head">
+    <div class="eyebrow" data-es="NO SOLO CERVEZA" data-en="NOT JUST BEER">NO SOLO CERVEZA</div>
+    <h2 data-es="Vinos & más" data-en="Wine & more">Vinos & más</h2>
+    <p data-es="Si alguien de la manada no toma cerveza, aquí también tiene su lugar." data-en="If someone in the pack doesn't drink beer, they still have a place here.">Si alguien de la manada no toma cerveza, aquí también tiene su lugar.</p>
+  </div>
+  <div class="photo-card"><img src="imgs/lata.jpg" alt="Lata de Wulfaven Brewing Company con el logo del lobo y vaso de cerveza"></div>
+  <div class="two-col">
+    <div class="treat">
+      <div class="emoji">🍾</div>
+      <h3>Beerlini</h3>
+      <p data-es="Nuestra mezcla de cerveza + prosecco con guayaba, maracuyá o mango." data-en="Our blend of beer + prosecco with guava, passion fruit or mango.">Nuestra mezcla de cerveza + prosecco con guayaba, maracuyá o mango.</p>
+    </div>
+    <div class="treat">
+      <div class="emoji">🍷</div>
+      <h3 data-es="Vinos" data-en="Wine">Vinos</h3>
+      <p data-es="Selección de vinos para acompañar la tarde." data-en="A selection of wines for the evening.">Selección de vinos para acompañar la tarde.</p>
+    </div>
+    <div class="treat">
+      <div class="emoji">🥫</div>
+      <h3 data-es="Sidras y seltzers" data-en="Ciders & seltzers">Sidras y seltzers</h3>
+      <p data-es="Sidras y seltzers en lata, bien fríos." data-en="Ciders and seltzers in cans, ice cold.">Sidras y seltzers en lata, bien fríos.</p>
+    </div>
+    <div class="treat">
+      <div class="emoji">🥤</div>
+      <h3 data-es="Sin alcohol" data-en="Non-alcoholic">Sin alcohol</h3>
+      <p data-es="También hay bebidas sin alcohol disponibles." data-en="Non-alcoholic beverages also available.">También hay bebidas sin alcohol disponibles.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= VISÍTANOS ================= -->
+<section class="cream" id="visitanos">
+  <div class="sec-head">
+    <div class="eyebrow" data-es="TE ESPERAMOS" data-en="COME SEE US">TE ESPERAMOS</div>
+    <h2 data-es="Visítanos" data-en="Visit us">Visítanos</h2>
+  </div>
+  <div class="photo-card"><img src="imgs/letrero.jpg" alt="Letrero de Wulfaven Brewing Company en 10828 Perez Dr al atardecer"></div>
+  <div class="addr-card">
+    <div class="row"><span>📍</span><div><strong>Wulfaven Brewing Company</strong><br>10828 Perez Dr, Tampa, FL 33618</div></div>
+    <div class="row"><span>📞</span><div><a href="tel:+18133748226" style="font-weight:800">(813) 374-8226</a></div></div>
+  </div>
+  <div class="wrap">
+    <table class="hours">
+      <tr><td data-es="Lunes" data-en="Monday">Lunes</td><td data-es="Cerrado" data-en="Closed" style="font-weight:700">Cerrado</td></tr>
+      <tr><td data-es="Martes – Jueves" data-en="Tuesday – Thursday">Martes – Jueves</td><td>4 – 10 PM</td></tr>
+      <tr><td data-es="Viernes" data-en="Friday">Viernes</td><td>2 – 11 PM</td></tr>
+      <tr><td data-es="Sábado" data-en="Saturday">Sábado</td><td>12 – 11 PM</td></tr>
+      <tr><td data-es="Domingo" data-en="Sunday">Domingo</td><td>12 – 8 PM</td></tr>
+    </table>
+  </div>
+  <div class="map-frame">
+    <iframe title="Mapa — Wulfaven Brewing Company" loading="lazy" src="https://www.google.com/maps?q=Wulfaven%20Brewing%20Company%2C%2010828%20Perez%20Dr%2C%20Tampa%2C%20FL%2033618&output=embed"></iframe>
+  </div>
+  <div style="text-align:center;padding:0 20px">
+    <a class="btn btn-yellow big" href="https://www.google.com/maps/dir/?api=1&destination=Wulfaven+Brewing+Company,+10828+Perez+Dr,+Tampa,+FL+33618" target="_blank" rel="noopener" data-es="📍 Cómo llegar" data-en="📍 Get directions">📍 Cómo llegar</a>
+  </div>
+</section>
+
+<!-- ================= EVENTOS PRIVADOS ================= -->
+<section class="sage" id="privados">
+  <div class="sec-head">
+    <div class="eyebrow" data-es="CELEBRA CON LA MANADA" data-en="CELEBRATE WITH THE PACK">CELEBRA CON LA MANADA</div>
+    <h2 data-es="Eventos privados" data-en="Private events">Eventos privados</h2>
+    <p data-es="Cumpleaños, reuniones de equipo, celebraciones familiares… Reserva tu fecha con nosotros." data-en="Birthdays, team gatherings, family celebrations… Reserve your date with us.">Cumpleaños, reuniones de equipo, celebraciones familiares… Reserva tu fecha con nosotros.</p>
+  </div>
+  <form class="priv" id="priv-form" onsubmit="return submitPriv(event)">
+    <label for="f-nombre" data-es="Nombre *" data-en="Name *">Nombre *</label>
+    <input id="f-nombre" name="nombre" required autocomplete="name">
+    <label for="f-email" data-es="Correo electrónico *" data-en="Email *">Correo electrónico *</label>
+    <input id="f-email" name="email" type="email" required autocomplete="email">
+    <label for="f-tel" data-es="Teléfono" data-en="Phone">Teléfono</label>
+    <input id="f-tel" name="telefono" type="tel" autocomplete="tel">
+    <label for="f-fecha" data-es="Fecha tentativa *" data-en="Tentative date *">Fecha tentativa *</label>
+    <input id="f-fecha" name="fecha" type="date" required>
+    <label for="f-inv" data-es="Número de invitados *" data-en="Number of guests *">Número de invitados *</label>
+    <input id="f-inv" name="invitados" type="number" min="1" required>
+    <label for="f-msg" data-es="Cuéntanos de tu evento" data-en="Tell us about your event">Cuéntanos de tu evento</label>
+    <textarea id="f-msg" name="mensaje"></textarea>
+    <button class="btn btn-yellow big" type="submit" style="width:100%;justify-content:center;margin-top:18px;border:0;cursor:pointer" data-es="Solicitar reserva" data-en="Request booking">Solicitar reserva</button>
+    <p style="font-size:.82rem;text-align:center;margin-top:10px;opacity:.85" data-es="Sin pagos en línea: te contactaremos para confirmar disponibilidad." data-en="No online payments: we'll contact you to confirm availability.">Sin pagos en línea: te contactaremos para confirmar disponibilidad.</p>
+  </form>
+  <div class="form-confirm" id="priv-confirm">
+    <h3 data-es="¡Solicitud recibida! 🎉" data-en="Request received! 🎉">¡Solicitud recibida! 🎉</h3>
+    <p id="confirm-text"></p>
+    <p style="margin-top:12px" data-es="¿Prefieres hablar ya? Llámanos:" data-en="Rather talk now? Call us:">¿Prefieres hablar ya? Llámanos:</p>
+    <a class="btn btn-yellow" href="tel:+18133748226" style="margin-top:8px">📞 (813) 374-8226</a>
+  </div>
+</section>
+
+<!-- ================= INSTAGRAM ================= -->
+<section class="cream" id="instagram">
+  <div class="sec-head">
+    <div class="eyebrow" data-es="SÍGUENOS" data-en="FOLLOW US">SÍGUENOS</div>
+    <h2>Instagram</h2>
+  </div>
+  <div class="photo-card"><img src="imgs/comunidad.jpg" alt="Amigos de la comunidad Wulfaven disfrutando cervezas"></div>
+  <div class="ig-cta">
+    <div class="ig-handle">@wulfavenbrewing</div>
+    <p data-es="5,734 seguidores · El calendario semanal, los trucks y las cervezas nuevas se anuncian aquí primero." data-en="5,734 followers · The weekly calendar, the trucks and new beers are announced here first.">5,734 seguidores · El calendario semanal, los trucks y las cervezas nuevas se anuncian aquí primero.</p>
+    <a class="btn btn-yellow big" href="https://www.instagram.com/wulfavenbrewing/" target="_blank" rel="noopener" style="margin-top:16px">📸 <span data-es="Seguir en Instagram" data-en="Follow on Instagram">Seguir en Instagram</span></a>
+  </div>
+</section>
+
+<!-- ================= RESEÑAS ================= -->
+<section class="ink" id="resenas">
+  <div class="sec-head">
+    <div class="eyebrow" data-es="LO QUE DICE LA MANADA" data-en="WHAT THE PACK SAYS">LO QUE DICE LA MANADA</div>
+    <div class="big-rating">4.8</div>
+    <div class="stars">★★★★★</div>
+    <p data-es="242 reseñas en Google. ¿Ya nos visitaste? Déjanos la tuya." data-en="242 reviews on Google. Already visited us? Leave yours.">242 reseñas en Google. ¿Ya nos visitaste? Déjanos la tuya.</p>
+  </div>
+  <div class="qr-grid">
+    <div class="qr-card">
+      <img src="qr/qr-resena.png" alt="QR para dejar una reseña en Google">
+      <h3 data-es="Déjanos tu reseña" data-en="Leave us a review">Déjanos tu reseña</h3>
+      <p data-es="Escanea para calificar en Google" data-en="Scan to rate us on Google">Escanea para calificar en Google</p>
+    </div>
+    <div class="qr-card">
+      <img src="qr/qr-ubicacion.png" alt="QR con la ubicación en Google Maps">
+      <h3 data-es="Encuéntranos" data-en="Find us">Encuéntranos</h3>
+      <p data-es="Escanea para abrir en Maps" data-en="Scan to open in Maps">Escanea para abrir en Maps</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="fname">WULFAVEN BREWING CO.</div>
+  <p>10828 Perez Dr, Tampa, FL 33618</p>
+  <a class="ftel" href="tel:+18133748226">📞 (813) 374-8226</a>
+  <p data-es="Lun cerrado · Mar–Jue 4–10 PM · Vie 2–11 PM · Sáb 12–11 PM · Dom 12–8 PM" data-en="Mon closed · Tue–Thu 4–10 PM · Fri 2–11 PM · Sat 12–11 PM · Sun 12–8 PM">Lun cerrado · Mar–Jue 4–10 PM · Vie 2–11 PM · Sáb 12–11 PM · Dom 12–8 PM</p>
+  <p class="fine" data-es="Propuesta de rediseño · Demo — no es el sitio oficial" data-en="Redesign proposal · Demo — not the official site">Propuesta de rediseño · Demo — no es el sitio oficial</p>
+</footer>
+
+</div><!-- /page -->
+<script src="js/taplist.js"></script>
+<script>
+var LANG = localStorage.getItem('wv-lang') || 'es';
+function t(el){ return LANG === 'es' ? el.getAttribute('data-es') : el.getAttribute('data-en'); }
+function applyLang(){
+  document.documentElement.lang = LANG;
+  document.querySelectorAll('[data-es]').forEach(function(el){
+    var v = t(el);
+    if (v !== null) el.innerHTML = v;
+  });
+  document.getElementById('btn-es').classList.toggle('active', LANG === 'es');
+  document.getElementById('btn-en').classList.toggle('active', LANG === 'en');
+  renderBeers();
+}
+function setLang(l){ LANG = l; localStorage.setItem('wv-lang', l); applyLang(); }
+function renderBeers(){
+  var grid = document.getElementById('beer-grid');
+  if (!grid || typeof TAPLIST === 'undefined') return;
+  var ask = LANG === 'es' ? 'Pregúntanos en barra' : 'Ask us at the bar';
+  var html = '';
+  TAPLIST.forEach(function(b){
+    var abv = (b.abv === null || b.abv === undefined)
+      ? '<span class="babv ask">' + ask + '</span>'
+      : '<span class="babv">' + b.abv.toFixed(1) + '% ABV</span>';
+    var note = '';
+    if (b.nota) note = '<br><span class="bnote">' + (LANG === 'es' ? b.nota : (b.nota_en || b.nota)) + '</span>';
+    html += '<div class="beer"><div class="bname">' + b.nombre + '</div><div class="bstyle">' + b.estilo + '</div>' + abv + note + '</div>';
+  });
+  grid.innerHTML = html;
+}
+function submitPriv(e){
+  e.preventDefault();
+  var f = document.getElementById('priv-form');
+  var nombre = document.getElementById('f-nombre').value;
+  var fecha = document.getElementById('f-fecha').value;
+  var inv = document.getElementById('f-inv').value;
+  var msg = LANG === 'es'
+    ? 'Gracias, ' + nombre + '. Recibimos tu solicitud para el ' + fecha + ' (' + inv + ' invitados). Te contactaremos pronto para confirmar disponibilidad.'
+    : 'Thanks, ' + nombre + '. We received your request for ' + fecha + ' (' + inv + ' guests). We will contact you soon to confirm availability.';
+  document.getElementById('confirm-text').textContent = msg;
+  f.style.display = 'none';
+  document.getElementById('priv-confirm').classList.add('show');
+  document.getElementById('priv-confirm').scrollIntoView({behavior:'smooth', block:'center'});
+  return false;
+}
+applyLang();
+</script>
+</body>
+</html>
